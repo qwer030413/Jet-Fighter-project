@@ -19,7 +19,6 @@ public class player implements KeyListener, Runnable{
     
 
 
-    gameManager game;
     public player(double x, double y, int id)
     {
         this.x = x;
