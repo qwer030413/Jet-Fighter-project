@@ -74,6 +74,7 @@ public class player implements KeyListener, Runnable{
     goingTheSameWay();
     g2D.rotate(Math.toRadians(Deg),(image.getWidth(label) / 2) + x ,(image.getHeight(label) / 2) + y);
     g2D.drawImage(image,(int)x,(int)y,null); 
+    g2D.rotate(-Math.toRadians(Deg),(image.getWidth(label) / 2) + x ,(image.getHeight(label) / 2) + y);
    }
 
     @Override
