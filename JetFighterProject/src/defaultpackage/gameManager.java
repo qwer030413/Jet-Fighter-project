@@ -8,7 +8,8 @@ import java.awt.*;
 import java.awt.event.*; 
  
 public class gameManager extends JPanel implements ActionListener
-{ 
+{
+
     Image image;
     Timer timer; 
     player p1 = new player(0,0,1);
@@ -23,7 +24,6 @@ public class gameManager extends JPanel implements ActionListener
         // image = new ImageIcon("plane.jpg").getImage();
         timer = new Timer(1 , this);
         timer.start();
-        
         addKeyListener(p1);
         addKeyListener(p2);
         setFocusable(true);
@@ -32,7 +32,28 @@ public class gameManager extends JPanel implements ActionListener
 
 
     }   
-    
+
+    // gameManager(player player)
+    // {
+    //     this.player.setX(player.getx());
+    //     this.player.setY(player.gety());
+    //     this.player.setID(player.getID());
+    // }
+ 
+    public void paint(Graphics g)
+    {  
+   
+        super.paint(g);
+         p1.draw(g);
+         p2.draw(g);
+//        Thread a = new Thread(p1);
+//        a.start();
+   
+ 
+ 
+
+    } 
+
  
     public void paintComponent(Graphics g)
     {  
@@ -49,6 +70,7 @@ public class gameManager extends JPanel implements ActionListener
 
     } 
     
+
 
     
  
@@ -71,6 +93,12 @@ public class gameManager extends JPanel implements ActionListener
 
     
     
+}
+
+
 
     
-}
+    
+
+    
+

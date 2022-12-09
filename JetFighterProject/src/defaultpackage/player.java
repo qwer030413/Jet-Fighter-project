@@ -12,8 +12,8 @@ public class player implements KeyListener, Runnable{
     private int id;
     private double Deg = 0;
     private double DegVel = 3;
-    private double velX = 3;
-    private double velY = 3;
+    private double velX = 2;
+    private double velY = 2;
     JLabel label;
     Image image = new ImageIcon(this.getClass().getResource("/plane.jpg")).getImage();
     
@@ -80,8 +80,26 @@ public class player implements KeyListener, Runnable{
 
     @Override
     public void run() {  
+
         
         
+        // draw(gameManager.g);
+        // Graphics2D g2D = (Graphics2D) g;
+        // goingTheSameWay();
+        // g2D.rotate(Math.toRadians(Deg),(image.getWidth(label) / 2) + x ,(image.getHeight(label) / 2) + y);
+        // g2D.drawImage(image,(int)x,(int)y,null); 
+        // try{
+        //     while(true) 
+        //     {
+        //         goingTheSameWay();
+                
+        //         Thread.sleep(7);
+        //     }
+             
+        // } 
+        // catch(Exception e) {
+        //     System.err.println(e.getMessage());
+        // }
     }
  
  public void goingTheSameWay()
@@ -91,23 +109,18 @@ public class player implements KeyListener, Runnable{
 
     }
 
+
     @Override
     public void keyPressed(KeyEvent e) 
     {
-        int key = e.getKeyCode();
+        int key = e.getKeyCode();  
         
-        
-        
-        
-        
-        
-        
+      
         if(id == 1)
         {
             if(key == KeyEvent.VK_RIGHT)
             {
-                Deg += DegVel;
-             
+                Deg += DegVel;             
            
  
             }
@@ -119,13 +132,14 @@ public class player implements KeyListener, Runnable{
             }
 
         }
-        if(id == 2)
+        
+
+        else if(id == 2)
         {
 
             if(key == KeyEvent.VK_D)
             {
                 Deg += DegVel;
-
             
            
  
@@ -133,7 +147,6 @@ public class player implements KeyListener, Runnable{
             if(key == KeyEvent.VK_A)
             {
                 Deg -= DegVel;
-
             
             }
         }
@@ -153,3 +166,6 @@ public class player implements KeyListener, Runnable{
     }
     
 }
+
+    
+
